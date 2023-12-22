@@ -17,7 +17,7 @@ void bubble_sort(int *array, size_t size)
 	while (strt < size)
 
 		/*Outer loop for each pass through array*/
-		for (strt = 0; strt < size - 1; strt++)
+		for (; strt < size - 1; strt++)
 		{
 			/*Inner loop to compare and swap elements*/
 			for (nxt = 0; nxt < size - strt - 1; nxt++)
