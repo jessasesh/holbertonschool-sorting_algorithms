@@ -9,9 +9,10 @@ void bubble_sort(int *array, size_t size)
 {
 	size_t strt, nxt;
 	int swap;
+	int swapped = 0;
 
 	/*Check for NULL or array with less than 2 elements*/
-	if (!array || size < 2)
+	if (!array || size < 1)
 		return;
 
 	while (strt < size)
@@ -29,10 +30,12 @@ void bubble_sort(int *array, size_t size)
 					swap = array[nxt + 1];
 					array[nxt] = array[nxt + 1];
 					array[nxt + 1] = swap;
+
 					print_array(array, size);
+					swapped = 1;
 				}
-				nxt++;
 			}
-			strt++;
+			if (swapped == 0)
+				break;
 		}
 }
