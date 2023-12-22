@@ -11,7 +11,7 @@ void bubble_sort(int *array, size_t size)
 	int tmp;
 
 	/*Check for NULL or array with less than 2 elements*/
-	if (array == NULL || size < 2)
+	if (array == NULL || size == 0)
 		return;
 
 	/*Outer loop for each pass through array*/
