@@ -8,12 +8,11 @@
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, j;
+	int tmp;
 
 	/*Check for NULL or array with less than 2 elements*/
 	if (array == NULL || size < 2)
 		return;
-
-	int tmp;
 
 	/*Outer loop for each pass through array*/
 	for (i = 0; i < size - 1; i++)
